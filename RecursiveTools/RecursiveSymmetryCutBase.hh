@@ -36,6 +36,7 @@
 #include "fastjet/tools/Recluster.hh"
 #else
 #include "Recluster.hh"
+#endif
 #include <atomic>
 
 /** \mainpage RecursiveTools contrib 
