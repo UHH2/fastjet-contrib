@@ -104,6 +104,11 @@ namespace contrib {
                 assert(_N <= 5);
             }
 
+            delete[] energyStore;
+            for (uint inC=0; inC<nC; inC++) {
+                delete[] angleStore[inC];
+            }
+            delete[] angleStore;
         } else if (_strategy == slow) {
             if (_N == 3) {
                 for (unsigned int i = 0; i < particles.size(); i++) {
@@ -481,6 +486,11 @@ namespace contrib {
             } else {
                 assert(_N <= 5);
             }
+            delete[] energyStore;
+            for (uint inC=0; inC<nC; inC++) {
+                delete[] angleStore[inC];
+            }
+            delete[] angleStore;
         } else if (_strategy == EnergyCorrelator::slow) {
             if (_N == 3) {
                 unsigned int N_total = 3;
